@@ -86,9 +86,9 @@ const beat = (beatCount, cycleCount) => {
   let g = 255 - random(255)
   let b = 127 + random(255) - (random(128))
   if (beatCount !== 1) randomRect(random(255), beatCount)
-  if (beatCount === 4) {
-    window.setTimeout( () => randomRect(random(500), beatCount), BEAT_INTERVAL * .7)
-    window.setTimeout( () => randomRect(random(500), beatCount), BEAT_INTERVAL * .85)
+  if (beatCount === 4 && cycleCount !== 4) {
+    window.setTimeout( () => randomRect(600, beatCount), BEAT_INTERVAL * .7)
+    window.setTimeout( () => randomRect(600, beatCount), BEAT_INTERVAL * .85)
   }
   for (let cycleI = 1; cycleI <= cycleCount; cycleI++) {
     let x, y
