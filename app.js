@@ -1,19 +1,19 @@
 'use strict'
 const canvas = document.getElementById('canvas')
 
-class BPMInput extends HTMLInputElement {
-}
+// class BPMInput extends HTMLInputElement {
+// }
 
-const BPM = document.registerElement('bpm-control', BPMInput)
+// const BPM = document.registerElement('bpm-control', BPMInput)
 
-document.body.appendChild(
-  new BPM()
-)
+// document.body.appendChild(
+//   new BPM()
+// )
 
 let pause = false
 
-const canvasX = window.innerWidth - 9
-const canvasY = window.innerHeight - 9
+const canvasX = window.innerWidth
+const canvasY = window.innerHeight
 canvas.width = canvasX
 canvas.height = canvasY
 
