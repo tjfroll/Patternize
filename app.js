@@ -40,8 +40,8 @@ const safeColor = (num) => withinRange(num, 0, 255)
 const clearCanvas = () => ctx.clearRect(0, 0, canvas.width, canvas.height)
 
 const randomRect = (code, count) => {
-  let w = withinRange(random(code) * count * 5, 50 * count, canvasX - outlineSize)
-  let h = withinRange(random(code) * count * 50, 50 * count, canvasY - outlineSize)
+  let w = withinRange(random(code) * count / 2, 50 * count, canvasX)
+  let h = withinRange(random(code) * count * 50, 50 * count, canvasY)
   let x = withinRange(random(canvasX) - w/2, parseInt(-w/2), canvasX + w/2)
   let y = withinRange(random(canvasY) - h/2, parseInt(-h/2), canvasY + h/2)
   ctx.fillStyle = outlineColor
